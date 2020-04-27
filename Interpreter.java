@@ -19,6 +19,8 @@ public abstract class Interpreter extends Parser {
         getToken();
 
         FunDefList funDefList = funDefList();
+
+        funDefList.printParseTree("");
         if (!t.isEmpty())
             errorMsg(0);
         else if (!syntaxErrorFound) {

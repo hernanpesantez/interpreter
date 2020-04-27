@@ -10,23 +10,18 @@ class NilVal extends Val {
     }
 
     Val cloneVal() {
-        // TODO Auto-generated method stub
         return new NilVal(i);
     }
 
     float floatVal() {
-        // TODO Auto-generated method stub
-        return 0;
+        return (float)(i);
     }
 
     boolean isNumber() {
-        // TODO Auto-generated method stub
         return false;
     }
 
     boolean isZero() {
-        // TODO Auto-generated method stub
         return false;
     }
-    // You add suitable constructors/functions.
 }
