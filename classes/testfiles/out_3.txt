@@ -1,0 +1,86 @@
+0 <exp>
+ 1 <fun exp>
+  2 +
+  2 <exp list>
+   3 <exp>
+    4 <fun exp>
+     5 -
+     5 <exp list>
+      6 <exp>
+       7 1
+      6 <exp>
+       7 2
+      6 <exp>
+       7 3
+      6 <exp>
+       7 4
+      6 <exp>
+       7 5
+   3 <exp>
+    4 <fun exp>
+     5 *
+     5 <exp list>
+      6 <exp>
+       7 1
+      6 <exp>
+       7 2
+      6 <exp>
+       7 3
+      6 <exp>
+       7 4
+      6 <exp>
+       7 5
+   3 <exp>
+    4 <fun exp>
+     5 /
+     5 <exp list>
+      6 <exp>
+       7 50
+      6 <exp>
+       7 30
+      6 <exp>
+       7 7
+      6 <exp>
+       7 4
+      6 <exp>
+       7 2
+   3 <exp>
+    4 <fun exp>
+     5 +
+     5 <exp list>
+   3 <exp>
+    4 <fun exp>
+     5 +
+     5 <exp list>
+      6 <exp>
+       7 5
+   3 <exp>
+    4 <fun exp>
+     5 -
+     5 <exp list>
+   3 <exp>
+    4 <fun exp>
+     5 -
+     5 <exp list>
+      6 <exp>
+       7 5
+   3 <exp>
+    4 <fun exp>
+     5 *
+     5 <exp list>
+   3 <exp>
+    4 <fun exp>
+     5 *
+     5 <exp list>
+      6 <exp>
+       7 5
+   3 <exp>
+    4 <fun exp>
+     5 /
+     5 <exp list>
+   3 <exp>
+    4 <fun exp>
+     5 /
+     5 <exp list>
+      6 <exp>
+       7 5
