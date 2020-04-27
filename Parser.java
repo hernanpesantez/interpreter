@@ -172,6 +172,9 @@ public abstract class Parser extends LexAnalyzer {
 
     public static FunExp funExp()
 
+    // ⟨exp⟩ → ⟨int⟩ | ⟨float⟩ | ⟨floatE⟩ | ⟨floatF⟩ | "nil" | "(" ⟨fun exp⟩ ")" |
+    // "if" ⟨exp⟩ "then" ⟨exp⟩ "else" ⟨exp⟩
+
     // <fun exp> --> <fun op> <exp list>
     // <fun op> --> <id> | "pair" | "first" | "second" | <arith op> | <bool op> |
     // <comp op>
@@ -179,16 +182,21 @@ public abstract class Parser extends LexAnalyzer {
     // <bool op> --> "or" | "and" | "not"
     // <comp op> --> "<" | "<=" | ">" | ">=" | "="
 
+    // ⟨exp list⟩ → ε | ⟨exp⟩ ⟨exp list⟩
+
     {
         if (state == State.Id) {
             Id id = new Id(t);
             getToken();
+
             ExpList expList = expList();
             return new FunCall(id, expList);
+
         } else if (state.isPairOp() || state.isArithOp() || state.isBoolOp() || state.isCompOp()) {
             State opState = state;
             getToken();
             ExpList expList = expList();
+
             switch (opState) {
                 case Keyword_pair:
                     return new Pair(expList);
