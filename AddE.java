@@ -2,8 +2,15 @@ import java.util.*;
 
 class AddE extends FunExp {
 
+	FunExp funExp;
+
 	AddE(ExpList expList) {
 		this.expList = expList;
+	}
+
+	AddE(FunExp funExp, ExpList expList) {
+		this.expList = expList;
+		this.funExp = funExp;
 	}
 
 	String getFunOp() {
@@ -13,7 +20,7 @@ class AddE extends FunExp {
 	public Val Eval(HashMap<String, Val> state) {
 
 		Val exp2Val = expList.Eval(state);
-		Val exp1Val = expList.Eval(state);
+		Val exp1Val = funExp.Eval(state);
 		if (exp1Val == null || exp2Val == null)
 			return null;
 

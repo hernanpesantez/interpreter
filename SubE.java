@@ -8,6 +8,10 @@ class SubE extends FunExp {
         this.expList = expList;
     }
 
+    SubE(Exp exp, ExpList expList) {
+
+    }
+
     String getFunOp() {
         return "-";
     }

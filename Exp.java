@@ -5,13 +5,18 @@ abstract class Exp {
         IO.displayln(indent + indent.length() + " <exp>");
     }
 
+    String id;
+    FunExp funExp;
+
     // int i = Integer.parseInt(State.Int.toString());
 
     IntVal intVal = new IntVal(23);
 
-    public Val Eval(HashMap<String, Val> hashMap) {
+    public Val Eval(HashMap<String, Val> state) {
 
-        System.out.println(State.Int);
+        Val eVal = funExp.Eval(state);
+        if (eVal != null)
+            state.put(id, eVal);
 
         return intVal.cloneVal();
     }
